@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView android:text="ID" android:textSize="20sp">
+
+            </TextView>
+            <EditText android:id="@+id/edtAddID" android:textSize="20sp" android:enabled="false"></EditText>
+
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Ten" android:textSize="20sp">
+
+            </TextView>
+            <EditText android:id="@+id/edtAddName" android:textSize="20sp" android:hint="Nhap ten"></EditText>
+
+
+        </TableRow>
+
+
+        <TableRow>
+            <TextView android:text="Gia" android:textSize="20sp">
+
+            </TextView>
+            <EditText android:id="@+id/edtAddPrices" android:textSize="20sp"
+                android:hint="Nhap gia"
+                android:inputType="number"></EditText>
+
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Chon anh" android:textSize="20sp">
+
+            </TextView>
+
+            <Spinner android:id="@+id/list_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginLeft="10dp"
+                android:spinnerMode="dropdown">
+            </Spinner>
+
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Chon the loai" android:textSize="20sp">
+            </TextView>
+
+            <Spinner android:id="@+id/list_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginLeft="10dp"
+                android:spinnerMode="dropdown">
+            </Spinner>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp">
+            <Button android:id="@+id/btAdd" android:text="Them" android:textSize="20sp" android:layout_margin="10dp"></Button>
+            <Button android:id="@+id/btRedo" android:text="Lam Lai" android:textSize="20sp" android:layout_margin="10dp"></Button>
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
