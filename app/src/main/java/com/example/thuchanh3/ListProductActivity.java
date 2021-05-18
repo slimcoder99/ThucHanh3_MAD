@@ -14,6 +14,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.thuchanh3.DatabaseProvider.SQLiteHelper;
+import com.example.thuchanh3.Model.Item;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +27,9 @@ public class ListProductActivity extends AppCompatActivity implements AdapterVie
     private RecyclerView listProduct;
     private Button addNewBtn;
     SharedPreferences userInfo;
+
+    List<Item> listItem;
+    SQLiteHelper sqLiteHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +53,12 @@ public class ListProductActivity extends AppCompatActivity implements AdapterVie
                 startActivity(intent);
             }
         });
+
+        sqLiteHelper = new SQLiteHelper(getBaseContext());
+        listItem = sqLiteHelper.getAllItems();
+
+        Item item = (Item) listItem.get(0);
+        System.out.println(item.toString());
     }
 
     private void getUserName() {

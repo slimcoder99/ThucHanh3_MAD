@@ -74,7 +74,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public List<Item> getAllNotes() {
+    public List<Item> getAllItems() {
         Log.i(TAG, "MyDatabaseHelper.getAllNotes ... " );
 
         List<Item> itemList = new ArrayList<>();

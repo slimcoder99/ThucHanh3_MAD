@@ -53,6 +53,7 @@ public class AddNewProductActivity extends AppCompatActivity {
                 reset();
             }
         });
+
     }
 
     private void addItemOnProductImage() {
